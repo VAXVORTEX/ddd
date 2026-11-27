@@ -1,0 +1,21 @@
+import { WorkReportedV1Message } from '../../Contracts/WorkReportedV1Message';
+
+export class WorkReportedV1Builder {
+  public static create(overrides: Partial<WorkReportedV1Message> = {}): WorkReportedV1Message {
+    return {
+      MessageId: '11111111-1111-1111-1111-111111111111',
+      Version: 1,
+      CorrelationId: '22222222-2222-2222-2222-222222222222',
+      RepairRequestId: '22222222-2222-2222-2222-222222222222',
+      WorkOrderId: '33333333-3333-3333-3333-333333333333',
+      ReportId: '66666666-6666-6666-6666-666666666666',
+      TechnicianId: '44444444-4444-4444-4444-444444444444',
+      Revision: 1,
+      OccurredAtUtc: '2026-10-01T09:30:00Z',
+      ReportedAtUtc: '2026-10-01T09:30:00Z',
+      StateCode: 'REPORTED',
+      Summary: 'Замінено підшипник',
+      ...overrides,
+    };
+  }
+}
